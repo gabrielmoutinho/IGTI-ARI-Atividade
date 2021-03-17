@@ -40,7 +40,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Controllers
             try
             {
                 _instalacoesRepository.AddInstalacao(instalacao);
-                return Ok();
+                return StatusCode(201);
             }
             catch
             {

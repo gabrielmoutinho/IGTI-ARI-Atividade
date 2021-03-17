@@ -32,7 +32,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Controllers
             try
             {
                 _clientesRepository.AddCliente(cliente);
-                return Ok();
+                return StatusCode(201);
             }
             catch (System.Exception)
             {
