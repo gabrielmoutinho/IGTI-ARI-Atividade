@@ -21,8 +21,8 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Controllers
             return _clientesRepository.GetClientes();
         }
         [HttpGet]
-        [Route("cpf")]
-        public Cliente GetClienteByCpf(string cpf)
+        [Route("[action]")]
+        public Cliente GetByCpf(string cpf)
         {
             return _clientesRepository.GetClienteByCpf(cpf);
         }
