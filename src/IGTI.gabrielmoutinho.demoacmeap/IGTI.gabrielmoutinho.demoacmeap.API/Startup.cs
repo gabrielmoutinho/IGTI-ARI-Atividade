@@ -31,6 +31,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API
             //
             services.AddScoped<ClientesRepository>();
             services.AddScoped<InstalacoesRepository>();
+            services.AddScoped<FaturasRepository>();
             //
             services.AddControllers().AddNewtonsoftJson(o =>
             {
