@@ -21,6 +21,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
             return _context.Instalacoes
                 .Include(a=> a.Endereco)
                 .Include(a=> a.Fatura)
+                .Include(a => a.Cliente)
                 .ToList();
         }
 
@@ -29,6 +30,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
             return _context.Instalacoes
                 .Include(a => a.Endereco)
                 .Include(a => a.Fatura)
+                .Include(a => a.Cliente)
                 .FirstOrDefault(a=> a.Codigo == codigo);
         }
 
@@ -37,6 +39,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
             return _context.Instalacoes
                 .Include(a => a.Endereco)
                 .Include(a => a.Fatura)
+                .Include(a=> a.Cliente)
                 .FirstOrDefault(a => a.Cliente.CPF == cpf);
         }
 
