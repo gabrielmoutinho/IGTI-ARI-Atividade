@@ -1,7 +1,6 @@
 ﻿using IGTI.gabrielmoutinho.demoacmeap.API.Models;
 using IGTI.gabrielmoutinho.demoacmeap.API.Persistence;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,7 +18,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
         public IEnumerable<Fatura> GetFaturas()
         {
             return _context.Faturas
-                .Include(a=> a.Instalacao)
+                .Include(a => a.Instalacao)
                 .ToList();
         }
 
@@ -27,7 +26,7 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
         {
             return _context.Faturas
                 .Include(a => a.Instalacao)
-                .FirstOrDefault(a=> a.Codigo == codigo);
+                .FirstOrDefault(a => a.Codigo == codigo);
         }
 
         public Fatura GetFaturaByClienteCpf(string cpf)

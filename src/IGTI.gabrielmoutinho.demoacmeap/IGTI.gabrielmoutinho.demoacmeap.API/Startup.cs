@@ -25,9 +25,9 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API
         {
             // Configuração SQLite
             var connection = Configuration["DatabaseSQLite:SqliteConnectionString"];
-                services.AddDbContext<APIDbContext>(options =>
-                options.UseSqlite(connection)
-            );
+            services.AddDbContext<APIDbContext>(options =>
+            options.UseSqlite(connection)
+        );
             //
             services.AddScoped<ClientesRepository>();
             services.AddScoped<InstalacoesRepository>();

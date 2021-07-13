@@ -33,8 +33,8 @@ namespace IGTI.gabrielmoutinho.demoacmeap.API.Repositories
                 .Include(a => a.Endereco)
                 .Include(a => a.Instalacao)
                     .ThenInclude(a => a.Fatura)
-                .Include(a=> a.Instalacao)
-                    .ThenInclude(a=> a.Endereco)
+                .Include(a => a.Instalacao)
+                    .ThenInclude(a => a.Endereco)
                 .FirstOrDefault(a => a.CPF == cpf);
         }
 
